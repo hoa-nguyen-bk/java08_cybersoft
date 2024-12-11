@@ -1,0 +1,121 @@
+
+package buoi14;
+
+public class Bai1 {
+
+}
+
+//Lớp Product (lớp cha)
+class Product {
+	protected String id;
+	protected String name;
+	protected double price;
+	protected int quantity;
+
+	public Product(String id, String name, double price, int quantity) {
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.quantity = quantity;
+	}
+
+	public double calculateDiscountedPrice(double discountRate) {
+		return price * (1 - discountRate);
+	}
+
+	public void displayDetails() {
+		System.out.println("ID: " + id);
+		System.out.println("Name: " + name);
+		System.out.println("Price: $" + price);
+		System.out.println("Quantity: " + quantity);
+	}
+}
+
+//Lớp Laptop (kế thừa Product)
+class Laptop extends Product {
+	private String processor;
+	private int ram;
+
+	public Laptop(String id, String name, double price, int quantity, String processor, int ram) {
+		super(id, name, price, quantity);
+		this.processor = processor;
+		this.ram = ram;
+	}
+
+	@Override
+	public double calculateDiscountedPrice(double discountRate) {
+		// Laptop có thêm giảm giá cố định $50
+		return super.calculateDiscountedPrice(discountRate) - 50;
+	}
+
+	@Override
+	public void displayDetails() {
+		super.displayDetails();
+		System.out.println("Processor: " + processor);
+		System.out.println("RAM: " + ram + "GB");
+	}
+}
+
+//Lớp Smartphone (kế thừa Product)
+class Smartphone extends Product {
+	private String cameraQuality;
+
+	public Smartphone(String id, String name, double price, int quantity, String cameraQuality) {
+		super(id, name, price, quantity);
+		this.cameraQuality = cameraQuality;
+	}
+
+	@Override
+	public double calculateDiscountedPrice(double discountRate) {
+		// Smartphone giảm giá tối đa 10% hoặc $100 (lấy giá trị nhỏ hơn)
+		double discountedPrice = super.calculateDiscountedPrice(discountRate);
+		return Math.max(price - 100, discountedPrice);
+	}
+
+	@Override
+	public void displayDetails() {
+		super.displayDetails();
+		System.out.println("Camera Quality: " + cameraQuality);
+	}
+}
+
+//Lớp Tablet (kế thừa Product)
+class Tablet extends Product {
+	private boolean hasStylus;
+
+	public Tablet(String id, String name, double price, int quantity, boolean hasStylus) {
+		super(id, name, price, quantity);
+		this.hasStylus = hasStylus;
+	}
+
+	@Override
+	public double calculateDiscountedPrice(double discountRate) {
+		// Tablet giảm giá thêm 5% nếu có stylus
+		double additionalDiscount = hasStylus ? 0.05 : 0.0;
+		return price * (1 - discountRate - additionalDiscount);
+	}
+
+	@Override
+	public void displayDetails() {
+		super.displayDetails();
+		System.out.println("Has Stylus: " + (hasStylus ? "Yes" : "No"));
+	}
+}
+
+//Lớp chính để chạy chương trình
+public class ElectronicStoreManagement {
+	public static void main(String[] args) {
+		// Tạo danh sách sản phẩm
+		Product[] products = { new Laptop("L01", "Dell XPS 13", 1200, 10, "Intel i7", 16),
+				new Smartphone("S01", "iPhone 14", 999, 20, "12MP Ultra Wide"),
+				new Tablet("T01", "Samsung Galaxy Tab S8", 700, 15, true) };
+
+		// Hiển thị thông tin chi tiết và giá giảm cho từng sản phẩm
+		double discountRate = 0.1; // 10% giảm giá
+		for (Product product : products) {
+			product.displayDetails();
+			System.out.printf("Discounted Price: $%.2f\n", product.calculateDiscountedPrice(discountRate));
+			System.out.println("--------------------------------------");
+		}
+	}
+}

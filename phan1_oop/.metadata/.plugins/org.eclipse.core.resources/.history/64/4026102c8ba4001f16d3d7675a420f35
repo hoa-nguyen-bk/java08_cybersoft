@@ -1,0 +1,6 @@
+package buoi14_sua;
+
+public class Smartphone {
+	private int camera_quality;
+	
+}

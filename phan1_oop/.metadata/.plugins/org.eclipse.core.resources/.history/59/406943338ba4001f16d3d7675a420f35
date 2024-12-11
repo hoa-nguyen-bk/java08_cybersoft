@@ -1,0 +1,6 @@
+package buoi14_sua;
+
+public class Smartphone extends Product {
+	private int camera_quality;
+	
+}

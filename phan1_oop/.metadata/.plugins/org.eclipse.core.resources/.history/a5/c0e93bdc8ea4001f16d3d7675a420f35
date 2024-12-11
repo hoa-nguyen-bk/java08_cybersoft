@@ -1,0 +1,13 @@
+package buoi14_sua;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Store {
+	public static void main(String[] args) {
+		Laptop lap1 = new Laptop(1, "MSI", 12.00, 10, 0, null, 0);
+		
+		List<Product> listProduct = new ArrayList<Product>();
+		listProduct.add(null);
+	}
+}

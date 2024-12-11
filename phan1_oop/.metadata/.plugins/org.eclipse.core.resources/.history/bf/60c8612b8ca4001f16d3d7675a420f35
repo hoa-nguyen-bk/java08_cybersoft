@@ -1,0 +1,15 @@
+package buoi14_sua;
+
+public class Laptop extends Product {
+	private String processor;
+	private int ram;
+	public Laptop() {
+		// TODO Auto-generated constructor stub
+	}
+	public Laptop(int id, String name, Float price, int quality, int discount_rate) {
+		super(id, name, price, quality, discount_rate);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+}

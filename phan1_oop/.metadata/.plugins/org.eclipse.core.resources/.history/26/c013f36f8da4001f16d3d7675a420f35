@@ -1,0 +1,14 @@
+package buoi14_sua;
+
+public class Tablet extends Product {
+	private String type;
+
+	public Tablet() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Tablet(int id, String name, Float price, int quality, int discount_rate, String type) {
+		super(id, name, price, quality, discount_rate);
+		this.type = type;
+	}
+}

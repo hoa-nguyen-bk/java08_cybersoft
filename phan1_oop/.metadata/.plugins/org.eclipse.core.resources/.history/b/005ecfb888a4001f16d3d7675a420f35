@@ -1,0 +1,47 @@
+package buoi14_sua;
+
+public class Product {
+	private int id;
+	private String name;
+	private Float price;
+	private int quality;
+	public Product() {
+		super();
+	}
+	public Product(int id, String name, Float price, int quality) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.quality = quality;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Float getPrice() {
+		return price;
+	}
+	public void setPrice(Float price) {
+		this.price = price;
+	}
+	public int getQuality() {
+		return quality;
+	}
+	public void setQuality(int quality) {
+		this.quality = quality;
+	}
+	
+	public void calculate_discounted_price(int discount_rate) {
+		return price*discount_rate/100;
+	}
+	
+}

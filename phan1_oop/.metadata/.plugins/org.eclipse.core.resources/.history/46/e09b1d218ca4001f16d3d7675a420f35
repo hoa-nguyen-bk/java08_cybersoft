@@ -1,0 +1,8 @@
+package buoi14_sua;
+
+public class Laptop extends Product {
+	private String processor;
+	private int ram;
+	
+	
+}

@@ -1,0 +1,23 @@
+package buoi14_sua;
+
+public class Smartphone extends Product {
+	private int camera_quality;
+
+	public Smartphone(int camera_quality) {
+		super();
+		this.camera_quality = camera_quality;
+	}
+
+	public Smartphone() {
+		super();
+	}
+
+	public int getCamera_quality() {
+		return camera_quality;
+	}
+
+	public void setCamera_quality(int camera_quality) {
+		this.camera_quality = camera_quality;
+	}
+	
+}

@@ -1,0 +1,10 @@
+package buoi14_sua;
+
+public class Product {
+	private int id;
+	private String name;
+	private Float price;
+	private int quality;
+	
+	
+}
