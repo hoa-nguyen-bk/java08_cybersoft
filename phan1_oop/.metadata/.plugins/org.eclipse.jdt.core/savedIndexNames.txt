@@ -1,3 +1,0 @@
-INDEX VERSION 1.134+E:\HOC\java08_cybersoft\phan1_oop\.metadata\.plugins\org.eclipse.jdt.core
-894235620.index
-1865797976.index
