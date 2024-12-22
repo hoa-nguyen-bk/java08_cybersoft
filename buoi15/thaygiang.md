@@ -95,3 +95,12 @@ zô etc >home>check localhost
 mình ko biết public ip của mình thì search
 
 what is my ip address
+
+#### 6. Để tạo máy liên kết dbeaver
+```
+username: root
+pass: admin123
+```
+nhớ set
+allowPublicKeyRetrieval: TRUE
+

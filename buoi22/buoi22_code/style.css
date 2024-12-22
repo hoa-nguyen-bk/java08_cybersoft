@@ -1,0 +1,36 @@
+  /*
+      Đặt cho nó cái tên
+      - tên class
+      - id: # nhớ tên phải là duy nhất và chỉ có một thẻ có tên đó. Gọi thẳng tên thẻ: thì toàn bộ thẻ trong cùng một file html sẽ ăn thuộc tính được định
+      + class thứ tự ưu tiên thấp hơn Id
+      Gọi thẳng tên thẻ: thì toàn bộ thẻ trong cùng một file html sẽ ăn thuộc tính được định
+
+      */
+
+  div {
+    color: blue;
+  }
+
+  #box1 {
+    color: aquamarine;
+  }
+
+  .box-internal {
+    font-size: 30px;
+    color: cadetblue;
+  }
+
+  .bg-aqua {
+    color: bisque;
+    background-color: blue;
+  }
+
+/*
+color: thay đổi màu text
+background: thêm hình hoặc màu cho background
+font-size: kích thuốc chữ
+margin: canh lề 
+padding: canh lề
+text-aligh: canh lề text
+border-radius: bo góc
+*/
