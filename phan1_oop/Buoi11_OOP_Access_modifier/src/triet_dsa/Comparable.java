@@ -47,7 +47,7 @@ public class Comparable implements Comparator<Integer> {
 			return -1; // a đứng trước b
 		}
 		 // a = 5, b = 6
-//        // Nếu a là số lẻ và b là số chẵn, b đứng trước
+		 // Nếu a là số lẻ và b là số chẵn, b đứng trước
         if (a % 2 != 0 && b % 2 == 0) {
 			System.out.printf("2. Nếu a là số lẻ và b là số chẵn\n");
             return 1; // b đứng trước a
