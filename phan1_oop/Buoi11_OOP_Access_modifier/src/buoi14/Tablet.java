@@ -6,7 +6,7 @@ class Tablet extends Product {
 
 	public Tablet(String id, String name, double price, int quantity, boolean hasStylus) {
 		super(id, name, price, quantity);
-		this.hasStylus = hasStylus;
+				this.hasStylus = hasStylus;
 	}
 
 	@Override
