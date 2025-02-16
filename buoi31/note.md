@@ -49,6 +49,7 @@ tạo New personal Access Token classic
   - zô config.git
   - thêm cái token zô cái chỗ này và thêm dấu @
 ![alt text](image-1.png)
+![alt text](image.png)
 - sau đó push lại và nó bình thường
 
 - khi vô công ty người ta hông khuyến khích xài token mà xài ssh, cái token là dành cho đối tác hoy, còn ssh nó bảo mật hơn nhiều, và dễ lắm yên tâm lên search là bít xài liền
@@ -60,3 +61,17 @@ khi chỉnh sửa, up file mới xong ta làm gì?
 - git push
 
 đã xin source anh Bình, tiếp tục làm homework bữa nhen
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+![alt text](image-6.png)
+
+![alt text](image-7.png)
