@@ -1,0 +1,83 @@
+{
+  "products": [
+    {
+      "category": "Màn hình, Máy tính để bàn",
+      "product_1": {
+        "name": "Màn hình Gaming ViewSonic VX2478 HD PRO 180HZ 24 inch",
+        "price": "2.690.000đ",
+        "original_price": "3.990.000đ",
+        "discount": "33%",
+        "additional_info": {
+          "response_time": "1ms",
+          "refresh_rate": "180Hz",
+          "size": "24 inch",
+          "resolution": "Full HD"
+        }
+      },
+      "product_2": {
+        "name": "Màn hình Gaming ASUS TUF VG249Q3A 24 inch",
+        "price": "3.090.000đ",
+        "original_price": "3.990.000đ",
+        "discount": "23%",
+        "additional_info": {
+          "response_time": "1ms",
+          "refresh_rate": "180Hz",
+          "size": "24 inch",
+          "resolution": "Full HD"
+        }
+      }
+    },
+    {
+      "category": "Máy tính bảng",
+      "product_1": {
+        "name": "iPad Air 6 M2 11 inch Wifi 128GB",
+        "price": "15.990.000đ",
+        "original_price": "16.990.000đ",
+        "discount": "6%",
+        "additional_info": {
+          "brand": "Apple",
+          "storage": "128GB",
+          "wifi": "Yes"
+        }
+      },
+      "product_2": {
+        "name": "iPad Gen 10 10.9 inch 2022 Wifi 64GB",
+        "price": "9.590.000đ",
+        "original_price": "12.999.000đ",
+        "discount": "26%",
+        "additional_info": {
+          "brand": "Apple",
+          "storage": "64GB",
+          "wifi": "Yes"
+        }
+      }
+    },
+    {
+      "category": "PC Gaming",
+      "product_1": {
+        "name": "Màn hình Monitor Xiaomi 27 inch A27i ELAS345EU",
+        "price": "2.390.000đ",
+        "original_price": "2.990.000đ",
+        "discount": "20%",
+        "additional_info": {
+          "response_time": "6ms",
+          "refresh_rate": "100Hz",
+          "size": "27 inch",
+          "resolution": "Full HD"
+        }
+      },
+      "product_2": {
+        "name": "Màn hình E-Dra EGM27F100H 27 inch",
+        "price": "2.190.000đ",
+        "original_price": "2.990.000đ",
+        "discount": "27%",
+        "additional_info": {
+          "response_time": "1ms",
+          "refresh_rate": "100Hz",
+          "size": "27 inch",
+          "resolution": "Full HD"
+        }
+      }
+    }
+  ]
+}
