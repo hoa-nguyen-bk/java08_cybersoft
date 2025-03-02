@@ -103,4 +103,3 @@ pass: admin123
 ```
 nhớ set
 allowPublicKeyRetrieval: TRUE
-
