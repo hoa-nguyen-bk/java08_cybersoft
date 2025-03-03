@@ -1,0 +1,54 @@
+{
+  "brand_id": "1",
+  "name": "Perth",
+  "address": {
+      "street": "35 Stirling Hwy, Crawley WA 6009",
+      "city": "Crawley",
+      "state": "Perth",
+      "postal_code": "6009",
+      "country": "Australia"
+  },
+  "contact": {
+      "phone_number": "+61 8 6488 6000",
+      "email": "info@universityclub.uwa.edu.au"
+  },
+  "business_hours": {
+      "Monday": {
+          "status": "on",
+          "hours": "10:00 AM - 5:00 PM"
+      },
+      "Tuesday": {
+          "status": "off",
+          "hours": ""
+      },
+      "Wednesday": {
+          "status": "on",
+          "hours": "10:00 AM - 5:00 PM\""
+      },
+      "Thursday": {
+          "status": "off",
+          "hours": ""
+      },
+      "Friday": {
+          "status": "off",
+          "hours": ""
+      },
+      "Saturday": {
+          "status": "off",
+          "hours": ""
+      },
+      "Sunday": {
+          "status": "off",
+          "hours": ""
+      }
+  },
+  "services": [
+      "408c3765-effd-11ef-b05d-bc24110477f7"
+  ],
+  "therapists": [
+      "em2522d4-a200-4b04-852d-c34472cf1ca6",
+      "em6522d4-a200-4b04-852d-c34472cf1ca6"
+  ],
+  "status": "ACTIVE",
+  "created_by_admin_id": "9e02a600-fb55-45b4-8765-98fca79a4091"
+}
