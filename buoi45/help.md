@@ -49,3 +49,14 @@ map <=> foreach
 ![alt text](image-7.png)
 
 ![alt text](image-8.png)
+
+
+[cor](https://docs.spring.io/spring-security/reference/reactive/integrations/cors.html?fbclid=IwZXh0bgNhZW0CMTEAAR2QVnNyKH-9dr4mfLn4jG9ixmNeYh2sMEpd_3hjo-fxQ6O-XlnyeW0fH4g_aem_6BMZ_p71owrdSs-NxzmHwA)
+
+
+
+nói thiệt hem còn cái nào ngoài lombok à a
+từ khóa là gì á anh em tìm hỉu a -> record
+
+
+https://extension.app.scribbl.co/share/meeting/5bff2530-72a2-4bcf-a0e8-5a608c3eb7c0
