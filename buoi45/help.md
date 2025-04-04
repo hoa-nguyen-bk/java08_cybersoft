@@ -60,3 +60,14 @@ từ khóa là gì á anh em tìm hỉu a -> record
 
 
 https://extension.app.scribbl.co/share/meeting/5bff2530-72a2-4bcf-a0e8-5a608c3eb7c0
+
+@Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(List.of("*"));
+        configuration.setAllowedMethods(List.of("*"));
+        configuration.setAllowedHeaders(List.of("*"));
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
+    }
