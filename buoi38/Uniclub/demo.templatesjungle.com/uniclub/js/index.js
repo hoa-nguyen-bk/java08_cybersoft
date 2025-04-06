@@ -5,6 +5,34 @@ $(document).ready(() => {
     page++;
     loadProduct(page);
   })
+  // $(".btn_cart").click(() => {
+  //   alert("aa");
+  // }) chạy ko được nó chỉ dựa vào lần render đầu
+  $("#home_product").on('click', '.btn_cart', function () {
+    // this đại diện cho class chứa btn_cart
+    const stringData = $(this).attr('data-product');
+    const jsonData = JSON.parse(stringData);
+    jsonData.quantity = 1;
+    let jsonArray = []
+    const cart = localStorage.getItem('cart');
+    let finded = 0;
+    if (cart) {
+      const stringListCartSaved = cart;
+      jsonArray = JSON.parse(stringListCartSaved);
+      for (let i = 0; i < jsonArray.length; i++) {
+        if (jsonArray[i].id === jsonData.id) {
+          jsonArray[i].quantity += 1;
+          finded = 1;
+        }
+      }
+    }
+    if (finded === 0) {
+      jsonArray.push(jsonData)
+    }
+    const stringListCart = JSON.stringify(jsonArray);
+    localStorage.setItem("cart", stringListCart)
+  })
+  // này chỉ đc đk 1 lần duy nhất, đây là khái niệm rerender, cho nên nó ko nghe sự kiện click của button cart
   function loadProduct(pageNumber) {
     $.ajax({
       method: "GET",
@@ -12,17 +40,18 @@ $(document).ready(() => {
     })
       .done((result) => { // trả kết quả của đường dẫn này
         console.log("Data Saved: ", result.data);
-        for(let i = 0; i < result.data.length;i++ ){
+        for (let i = 0; i < result.data.length; i++) {
           const item = result.data[i]
+          const dataJson = JSON.stringify(item)
           const html = `
           <div class="col-md-6 col-lg-3 my-4">
               <div class="product-item">
                 <div class="image-holder" style="width: 100%; height: 100%;">
-                  <img src="${item.urlImage}" alt="Books" class="product-image img-fluid">
+                  <img src="${item.urlImage}" alt="Books" class=" product-image img-fluid">
                 </div>
                 <div class="cart-concern">
                   <div class="cart-button d-flex justify-content-between align-items-center">
-                    <a href="#" class="btn-wrap cart-link d-flex align-items-center text-capitalize fs-6 ">add to cart <i
+                    <a data-product='${dataJson}'  class=" btn-wrap cart-link d-flex align-items-center text-capitalize fs-6 btn_cart">add to cart <i
                         class="icon icon-arrow-io pe-1"></i>
                     </a>
                     <a href="single-product.html" class="view-btn">
@@ -47,5 +76,5 @@ $(document).ready(() => {
       });
   }
 
- 
+
 })

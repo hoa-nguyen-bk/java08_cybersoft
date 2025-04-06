@@ -28,18 +28,27 @@ Here’s a structured template for the screen you’re working on, following the
     ```json
     {
       "branch": "Rosebery",
-      "week": "10-16 Feb",
+      "week": "10 Feb",
+      "week_number": 5,
       "employees": [
         {
           "name": "Jimi",
+          "color": "#000",
           "shifts": [
-            { "day": "Monday", "hours": 8, "revenue": 500 },
-            { "day": "Wednesday", "hours": 8, "revenue": 2500 }
+            { "day": "Monday", "date":"10/2/2025",  "hours": 8, "revenue": 500,"revenue_target": 5000},
+            { "day": "Wednesday",  "date":"11/2/2025",  "hours": 8, "revenue": 2500, "revenue_target": 5000}
           ]
         }
       ]
     }
     ```
+
+t chưa quy định giá trị cụ thể mà chắc có chừng này status:
+- fulltime
+- parttime chưa xếp lịch
+- partime approved
+- off và cũng bằng partime canceled
+
 
 - **Cập nhật lịch làm việc**  
   - **Phương thức:** `POST`  

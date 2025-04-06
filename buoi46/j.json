@@ -1,0 +1,40 @@
+{
+  "location_id": "1",
+  "location_name": "Rosebery",
+  "week_date": "10 Feb",
+  "week_number": 5,
+  "revenue": 500,
+  "revenue_target": 5000,
+  "week":[
+    {
+      "day": "Monday",
+      "date": "10/2/2025",
+      "revenue": 500,
+      "revenue_target": 5000
+    }
+  ],
+  "employees": [
+    {
+      "name": "Jimi",
+      "color": "#000",
+      "shifts": [
+        {
+          "day": "Monday",
+          "date": "10/2/2025",
+          "hours": 8,
+          "revenue": 500,
+          "revenue_target": 5000,
+          "status": ""
+        },
+        {
+          "day": "Wednesday",
+          "date": "11/2/2025",
+          "hours": 8,
+          "revenue": 2500,
+          "revenue_target": 5000,
+          "status": ""
+        }
+      ]
+    }
+  ]
+}
