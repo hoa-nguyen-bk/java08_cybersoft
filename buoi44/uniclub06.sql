@@ -87,6 +87,7 @@ CREATE TABLE user(
 	fullname varchar(255),
 	phone varchar(255),
 	role_id varchar(255),
+	username varchar(255),
 	
 	primary key(id)
 );

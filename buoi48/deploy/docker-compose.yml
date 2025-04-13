@@ -1,21 +1,23 @@
 services:
-  deployuniclub: # Tên service tự đặt tên gì cũng được
+  deployuniclub: #Tên service tự đặt tên gì cũng được
     image: uniclub08 #image
-    container_name: uniclub # tương đương --name tên_container
-    ports: # -p 8080:8080
+    container_name: uniclub #container name <=> --name ten_container
+    ports: #port <=> -p 8080:8080
       - "8080:8080"
-    environment: # -e DB_URL
-      - DB_URL=jdbc:mysql://mysql_uniclub:3306/uniclub06
+    environment: #environemnt <=> -e DB_URL="...."
+      - DB_URL=jdbc:mysql://mysql:3306/uniclub
       - DB_USERNAME=root
       - DB_PASSWORD=admin123
     networks:
       - uniclub
-
-  mysql: # Tên service tự đặt tên gì cũng được
-    image: mysql_uniclub #image
-    container_name: uniclub # tương đương --name tên_container
-    ports: # -p 8080:8080
+  
+  mysql: #Tên service tự đặt tên gì cũng được
+    image: mysql #image
+    container_name: mysql088
+    ports:
       - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin123
     networks:
       - uniclub
 

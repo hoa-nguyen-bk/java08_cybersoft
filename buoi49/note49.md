@@ -163,3 +163,38 @@ networks:
     driver: bridge
 ```
 
+
+```yml
+services:
+  deployuniclub: # Tên service tự đặt tên gì cũng được
+    image: uniclub08 #image
+    container_name: uniclub # tương đương --name tên_container
+    ports: # -p 8080:8080
+      - "8080:8080"
+    environment: # -e DB_URL
+      - DB_URL=jdbc:mysql://mysql_uniclub:3306/uniclub06
+      - DB_USERNAME=root
+      - DB_PASSWORD=admin123
+    networks:
+      - uniclub
+
+  mysql: # Tên service tự đặt tên gì cũng được
+    image: mysql_uniclub #image
+    container_name: uniclub # tương đương --name tên_container
+    ports: # -p 8080:8080
+      - "3307:3306"
+    networks:
+      - uniclub
+
+networks:
+  uniclub:
+    driver: bridge
+```
+
+```sh
+docker build -t uniclub08 . && docker compose up -d
+```
+
+```sh
+
+```
