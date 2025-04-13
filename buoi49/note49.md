@@ -124,7 +124,42 @@ Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications 
 
 [starting](https://docs.jboss.org/hibernate/orm/6.0/migration-guide/migration-guide.html?fbclid=IwZXh0bgNhZW0CMTEAAR7v8Z6sL3ylbIDbiV7Tg0ExsyOWZZWjIBigrjicbLltcD_kFARYifLv4i-z_Q_aem_AxLiw6LfpYI-WViZD3WFuw#_dialects)
 
+```sh
+docker compose down
+```
+xóa hết image tui mới tạo nãy
+
 hỏi a Bình:
 - nhờ anh bình nói lại sao nó tách ra folder tên là deploy->
   - deploy_default là default lun tạo deploy
 - cái dialect dùng để fix bug dialect à anh, a nói lại ý nghĩa nó miếng đc hem
+
+cũng hem bít lỗi gì thiệt
+
+```yml
+services:
+  deployuniclub: # Tên service tự đặt tên gì cũng được
+    image: uniclub08 #image
+    container_name: uniclub # tương đương --name tên_container
+    ports: # -p 8080:8080
+      - "8080:8080"
+    environment: # -e DB_URL
+      - DB_URL=jdbc:mysql://mysql_uniclub:3306/uniclub06
+      - DB_USERNAME=root
+      - DB_PASSWORD=admin123
+    networks:
+      - uniclub
+
+  mysql: # Tên service tự đặt tên gì cũng được
+    image: mysql_uniclub #image
+    container_name: uniclub # tương đương --name tên_container
+    ports: # -p 8080:8080
+      - "3307:3306"
+    networks:
+      - uniclub
+
+networks:
+  uniclub:
+    driver: bridge
+```
+

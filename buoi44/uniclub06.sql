@@ -84,7 +84,9 @@ CREATE TABLE user(
 	id int auto_increment,
 	email varchar(50),
 	password varchar(50),
-	full_name varchar(255),
+	fullname varchar(255),
+	phone varchar(255),
+	role_id varchar(255),
 	
 	primary key(id)
 );
