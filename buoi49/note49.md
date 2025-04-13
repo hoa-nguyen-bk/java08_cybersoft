@@ -198,3 +198,41 @@ docker build -t uniclub08 . && docker compose up -d
 ```sh
 
 ```
+
+thay vì nãy chạy 172.17 ip address cái docker.host
+
+## microservier
+
+mỗi 1 function tính năng of mình là microservice, nếu xài có 1 cục source thì khi sập sẽ sập hết
+- người ta mún tách nhỏ, khi 1 service sập mí cái kia còn ngon
+- người ta mún dự án có 10 tính năng, 10 tính năng đó độc lập nhau
+- 10 cục source, mỗi cục source 1 tính năng
+
+![alt text](image-2.png)
+- mún bít tính năng này nên tách ra hay ko thì cần coi source đó tính năng đó có cần dùng nhìu hay ko
+- nhưng mà gọi tới 3 đường dẫn thì mợt, fe chỉ mún gọi 1 đường dẫn hoy, thông qua cổng gateway
+
+![alt text](image-3.png)
+nếu /a thì 8080, còn /b là 8081, 
+anh nói lại miếng cái zụ nếu /a thì 8080, còn /b là 8081, là bên gateway quy định hay fe quy định
+
+And Bình sẽ hướng dẫn, spring clould hay spring gateway
+
+Ngoài ra gateway còn nhiều lứm, nhưng mà nó nhiệm vụ chính là forwarder thôi
+
+front 
+
+log lỗi gặp khó khăn khi ko biết log bắt đầu từ đâu lun á, vì lùng dài quá và phát sinh ra nhìu tình hún
+
+sinh ra thêm con central log
+
+![alt text](image-4.png)
+
+nó là nguyên 1 hệ thống lớn 1 hệ thống riêng 
+
+bữa sau học khái niệm queue, sau đó zô xây microservice, 
+
+
+![alt text](image-5.png)
+
+sau khi thanh toán gửi iu cầu giao dịch tới api ngân hàng, api insert update cung cấp cho user sử dụng khi kháh hàng commit 
