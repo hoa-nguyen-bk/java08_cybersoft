@@ -66,14 +66,18 @@ phải đóng gói file bỏ vào image, phải có 1 cái file gọi là docker
 ```cmd
 docker build -t uniclub08 .
 ```
+
+- uniclub08 là tên image
+
 ![alt text](image-8.png)
 
 ```cmd
 docker run --name uniclub -p 9090:8080 uniclub08 
 ```
-uniclub là tên container
 
-bây giờ chưa chạy đưuọc vì chưa gọi được docker
+- uniclub là tên container
+
+- bây giờ chưa chạy đưuọc vì chưa gọi được docker
 
 ![alt text](image-9.png)
 ![alt text](image-10.png)

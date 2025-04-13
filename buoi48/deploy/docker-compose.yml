@@ -1,0 +1,12 @@
+services:
+  deployuniclub: # Tên service tự đặt tên gì cũng được
+    image: uniclub08 #image
+    container_name: uniclub # tương đương --name tên_container
+    ports: # -p 8080:8080
+      - ":8080:8080"
+    environment: # -e DB_URL
+      - DB_URL=jdbc:mysql://172.17.0.2:3306/uniclub06
+      - DB_USERNAME=root
+      - DB_PASSWORD=admin123
+
+
