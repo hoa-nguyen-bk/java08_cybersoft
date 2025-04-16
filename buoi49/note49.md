@@ -236,3 +236,4 @@ bữa sau học khái niệm queue, sau đó zô xây microservice,
 ![alt text](image-5.png)
 
 sau khi thanh toán gửi iu cầu giao dịch tới api ngân hàng, api insert update cung cấp cho user sử dụng khi kháh hàng commit 
+
