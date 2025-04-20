@@ -53,7 +53,7 @@ topic của mình mình chỉ lưu đúng 1 data liên quan tới chiển khoả
 producer nó bắt lưu zô cái kalka broker, 
 
 ```yml
-kafka:
+  kafka:
     image: confluentinc/cp-kafka:latest
     hostname: kafka
     container_name: kafka
@@ -66,7 +66,7 @@ kafka:
       KAFKA_PROCESS_ROLES: controller,broker  # Kafka acts as both broker and controller.
       KAFKA_NODE_ID: 1  # A unique ID for this Kafka instance.
       KAFKA_CONTROLLER_QUORUM_VOTERS: "1@kafka:9093"  # Defines the controller voters.
-      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093,EXTERNAL://0.0.0:9094  #internal
+      KAFKA_LISTENERS: PLAINTEXT://kafka:9092,CONTROLLER://kafka:9093,EXTERNAL://kafka:9094  #internal
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONTROLLER:PLAINTEXT,EXTERNAL:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
@@ -80,11 +80,10 @@ kafka:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./data:/var/lib/kafka/data
-```
+    networks:
+      - uniclub
 
-cho xem giao diện
-```
-kafka-ui:
+  kafka-ui:
     image: provectuslabs/kafka-ui:latest
     container_name: kafka-ui-corporate
     ports:
@@ -92,5 +91,30 @@ kafka-ui:
     environment:
       KAFKA_CLUSTERS_0_NAME: local
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
-
+    networks:
+      - uniclub
 ```
+
+
+típ theo thêm cái network
+
+```sh
+docker compose up kafka -d
+docker compose up kafka-ui -d
+```
+
+lên host http://localhost:8085/ thì nó hiển thị 1 cluster online
+
+
+https://start.spring.io/
+
+DependenciesAdd dependencies...Ctrl + b
+- Spring Web Web
+Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container.
+- Spring for Apache Kafka Messaging
+Publish, subscribe, store, and process streams of records.
+
+
+https://www.tutorialspoint.com/spring_boot/spring_boot_apache_kafka.htm?fbclid=IwZXh0bgNhZW0CMTEAAR6Dsw5mkrjUpdyhNdhuznFNSSX04wYNvv-pdhIKKyVArc0c_Is1-TIjp2IP3g_aem_tscsNMz8pQR-qtx8LEE2ww
+
+start kafka trước xong mới start kafka ui
