@@ -1,0 +1,9 @@
+services:
+  redis08: # tên ứng dụng
+    image: redis/redis-stack # nếu mún version thì thêm :version zô
+    container_name: redis08
+    ports:
+      - "6379:6379" # dành cho con server
+      - "8001:8001" # dành cho con ui
+    environment:
+      REDIS_ARGS: --requirepass admin123
