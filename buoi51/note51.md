@@ -34,7 +34,7 @@
 ```sh
 docker pull redis/redis-stack
 ```
-
+docker compose up -d
 anh Bình bảo nhóm Huyền và Hòa làm tốt 😆
 
 [spring boot](https://viblo.asia/p/huong-dan-spring-boot-redis-aWj53NPGl6m?fbclid=IwZXh0bgNhZW0CMTEAAR7D81TGQNsgNiM9_1MMTy-OqN23SH-ccWvhLQdu6ykv4mNeUyEqHQ1HnF7ynQ_aem_ObMWl4M_vExnFWZQ3fTzQg)
