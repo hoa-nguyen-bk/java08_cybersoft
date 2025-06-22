@@ -55,5 +55,3 @@ xài cái này tạo con gateway xong forward, làm sao biết mình đúng
 ![alt text](image-3.png)
 
 xài cái gateway này nè
-
-![alt text](image-4.png)
